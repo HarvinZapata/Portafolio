@@ -113,3 +113,26 @@ a {
     color: var(--backgroud-color);
     text-align: right;
 }
+
+
+/* Se pretende usar z-indez, para aplicar capas */
+.pasatiempos{
+    border-radius: 1rem;
+    background: var(--backgroud-color);
+    box-shadow: inset 5px 0  var(--primary-color);
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+.pasatiempos__tittle{
+    color: var(--primary-light-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.pasatiempos__details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    border: #1e3a8a 2px solid;
+}
