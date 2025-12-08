@@ -196,7 +196,7 @@ a {
     margin-bottom: 1rem;
     border-radius: 1rem;
 } 
-.pasatiempos .viajes {
+.pasatiempos .viajes[open] {
     padding: 0 0.5rem;
 }
 
