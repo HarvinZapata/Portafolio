@@ -20,6 +20,7 @@
     30% - Color secundario (tarjetas, elementos medianos)
     10% - Color acento (botones, CTAs, highlights)*/
             --color-primary: #6366f1;
+            --color-primary-opacy: rgba(99, 102, 241, 0.1);
             --color-primary-dark: #4f46e5;
             --color-primary-light: #818cf8;
             --color-secondary: #06b6d4;
@@ -199,6 +200,7 @@ a {
     transform: translateY(-5px);
     box-shadow: var(--shadow-glow);
     border-color: var(--color-primary);
+    cursor: pointer;
 }
 
 .pasatiempos__details summary {
@@ -211,9 +213,101 @@ a {
     list-style: none;
 }
 
+.pasatiempos__details p {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.pasatiempos__details ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+/*Estilos para Iconos*/
+.mi-icono::before {
+    font-family: 'Font Awesome 6 Free'; /* Asegúrate de que la fuente esté cargada */
+    font-weight: 900; /* Peso necesario para los iconos sólidos */
+    content: '\f772'; /* Código Unicode para el icono de check */
+    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+}
+
+.mi-icono {
+    font-size: 1.2rem;
+    color: rgb(75, 192, 75);
+}
+
+.mi-icono-2::before {
+    font-family: 'Font Awesome 6 Free'; /* Asegúrate de que la fuente esté cargada */
+    font-weight: 900; /* Peso necesario para los iconos sólidos */
+    content: '\e4e3'; /* Código Unicode para el icono de pregunta */
+    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+}
 
 
+.mi-icono-2 {
+    font-size: 1.2rem;
+    color: rgba(231, 84, 87, 0.893);
+}
 
+.icono-list::before {
+    font-family: 'Font Awesome 6 Free'; /* Asegúrate de que la fuente esté cargada */
+    font-weight: 900; /* Peso necesario para los iconos sólidos */
+    content: '\f061'; /* Código Unicode para el icono de lista */
+    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+}
+
+/*Icono de locación en los departamentos*/
+.icono-location::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    content: '\f3c5';
+    margin-right: 0.5rem; 
+}
+
+/*Iconos para listas */
+.icono-row::before {
+    font-family: 'Font Awesome 6 Free';
+    font-size: 1rem;
+    color: var(--color-primary-light);
+    font-weight: 900;
+    content: '\f0da';
+    margin-right: 0.5rem; 
+}
+
+/* Estilo para la tabla de ciudades */
+table {
+    background-color: var(--bg-medium);
+    width: 100%;
+    border-radius: 2rem;
+    border: var(--color-primary) 1px solid; 
+    margin-top: 2rem;
+}
+
+.tabla td {
+    padding: 0.5rem 1rem;
+}
+
+.tabla .td-ciudades {
+    border-left: var(--color-primary) 2px solid;
+    border-bottom: var(--color-primary) 0.5px solid;
+}
+
+.tabla .td-departamentos {
+    border-bottom: var(--color-primary) 0.5px solid;
+}
+
+.tabla li{
+    display: flex;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem;
+    transition: 0.5s ease;
+}
+
+.tabla li:hover {
+    background-color: var(--color-primary-opacy);
+    transform: translateX(1rem);
+}
 
 
 
