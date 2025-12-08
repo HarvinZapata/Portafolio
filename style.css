@@ -19,13 +19,33 @@
     60% - Color principal (fondo, secciones grandes)
     30% - Color secundario (tarjetas, elementos medianos)
     10% - Color acento (botones, CTAs, highlights)*/
+            --color-primary: #6366f1;
+            --color-primary-dark: #4f46e5;
+            --color-primary-light: #818cf8;
+            --color-secondary: #06b6d4;
+            --color-accent: #f59e0b;
+            --bg-dark: #0f172a;
+            --bg-medium: #1e293b;
+            --bg-light: #334155;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
 }
 
 /* ESTILOS GENERALES */
 body {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    background-color: var(--backgroud-color);
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+    color: var(--text-primary);
 }
 
 /* ESTILOS DE NAVEGACIÓN */
@@ -132,7 +152,64 @@ a {
 
 
 /*Estilos para los detalles de los pasatiempos*/
+.pasatiempos{
+    color: var(--text-primary);
+    border-radius: 2rem;
+    background-color: var(--bg-card);
+    padding: 0.1rem;
+    margin: 2rem 1rem;
+}
 
+.pasatiempos__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.pasatiempos__title p{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.pasatiempos__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 1rem;
+    margin: 0rem 1rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pasatiempos__details details {
+    display: inline-block;
+    color: var(--text-primary);
+    background-color: var(--bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    min-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+} 
+
+.pasatiempos__details details:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-primary);
+}
+
+.pasatiempos__details summary {
+    
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    /*padding: var(--spacing-sm);*/
+    /*user-select: none;*/
+    list-style: none;
+}
 
 
 
