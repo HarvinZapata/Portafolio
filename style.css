@@ -44,7 +44,7 @@
 /* ESTILOS GENERALES */
 body {
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
     color: var(--text-primary);
 }
@@ -177,11 +177,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
     align-items: flex-start;
-    padding: 0 1rem;
-    margin: 0rem 1rem;
+    padding: 0 0.2rem;
+    margin: 0rem 0.5rem;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 2rem;
 }
 
@@ -276,6 +277,7 @@ a {
 
 /* Estilo para la tabla de ciudades */
 table {
+    max-width: 100%;
     background-color: var(--bg-medium);
     width: 100%;
     border-radius: 2rem;
@@ -298,9 +300,9 @@ table {
 
 .tabla li{
     display: flex;
-    margin: 0.5rem;
+    margin: 0.2rem;
     border-radius: 0.5rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.5rem;
     transition: 0.5s ease;
 }
 
