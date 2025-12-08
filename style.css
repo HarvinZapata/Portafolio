@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* VARIABLES DE COLOR */
 :root {
     --primary-color: #3b82f6; /*zul profundo - headers, títulos*/
     --primary-light-color: #60a5fa; /*Azul claro - hover, acentos*/
@@ -20,33 +21,34 @@
     10% - Color acento (botones, CTAs, highlights)*/
 }
 
+/* ESTILOS GENERALES */
 body {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     background-color: var(--backgroud-color);
 }
 
+/* ESTILOS DE NAVEGACIÓN */
 ul {
     list-style: none;
 }
 
+/* Enlaces sin subrayado y con color personalizado */
 a {
     text-decoration: none;
     color: var(---text-color);
 }
 
+/* HEADER */
 .header__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background: linear-gradient(to right, #677BE6, #7450A9);     */
-    border-radius: 20px;
-    padding: 10px;
-    margin-bottom: 30px;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .header__brand {
-    /* border: 2px solid #FF0000; */
     margin: 1rem;
     text-align: left;
     color: var(---text-color);
@@ -57,10 +59,6 @@ a {
     text-align: center;
 }
 
-/* .nav__list{
-    display: inline-block;
-    border: 2px solid #00FF00;
-}  */
 
 .nav__item {
     display: inline-block;
@@ -70,36 +68,54 @@ a {
     padding: 0.5rem 0.5rem;
 }
 
+/* Icono de Hamburguesa */
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: black;
+  margin: 6px 0;
+  border-radius: 2px;
+}
+
+/*Secciones Sobre Mi*/
 .sobre-mi{
     border-radius: 2rem;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 0.5rem;
 }
 
 .sobre-mi__title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .sobre-mi__title h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--backgroud-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .sobre-mi__title p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--backgroud-color);
     font-weight: 500;
+    padding: 0 1rem;
 }
 
 .sobre-mi__body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2rem;
-    margin: 0rem 4rem;
+    padding: 0 1rem;
+    margin: 0rem 1rem;
     color: var(--backgroud-color);
     text-align: justify;
     font-size: 1rem;
@@ -115,24 +131,18 @@ a {
 }
 
 
-/* Se pretende usar z-indez, para aplicar capas */
-.pasatiempos{
-    border-radius: 1rem;
-    background: var(--backgroud-color);
-    box-shadow: inset 5px 0  var(--primary-color);
-    padding: 2rem;
-    margin: 3rem 0;
-}
+/*Estilos para los detalles de los pasatiempos*/
 
-.pasatiempos__tittle{
-    color: var(--primary-light-color);
-    font-size: 1.8rem;
-    font-weight: 500;
-}
 
-.pasatiempos__details{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    border: #1e3a8a 2px solid;
+
+
+
+
+
+
+/* Responsive Design*/
+@media (max-width: 768px) {
+    .nav{
+        display: none;
+    }
 }
