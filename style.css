@@ -311,21 +311,18 @@ table {
     transition: 0.5s ease;
 }
 
-.tabla li:hover {
-    background-color: var(--color-primary-opacy);
-    transform: translateX(1rem);
-}
+
 
 /*Eliminar parpadeos en móviles por el hover*/
 li, li a {
   -webkit-tap-highlight-color: transparent;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  li:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease;
-  }
+@media (hover: hover) and (pointer: fine) { /* Solo aplica en dispositivos con puntero fino (como mouse) */
+  .tabla li:hover {
+    background-color: var(--color-primary-opacy);
+    transform: translateX(1rem);
+}
 }
 
 li:focus {
