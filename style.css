@@ -316,6 +316,21 @@ table {
     transform: translateX(1rem);
 }
 
+/*Eliminar parpadeos en móviles por el hover*/
+li, li a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  li:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+  }
+}
+
+li:focus {
+  outline: none;
+}
 
 
 /* Responsive Design*/
