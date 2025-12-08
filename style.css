@@ -158,7 +158,7 @@ a {
     border-radius: 2rem;
     background-color: var(--bg-card);
     padding: 0.1rem;
-    margin: 2rem 1rem;
+    margin: 2rem 0.2rem;
 }
 
 .pasatiempos__title{
@@ -191,7 +191,7 @@ a {
     color: var(--text-primary);
     background-color: var(--bg-light);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: 1rem;
     min-width: 100%;
     margin-bottom: 1rem;
     border-radius: 1rem;
