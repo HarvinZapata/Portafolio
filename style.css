@@ -167,7 +167,7 @@ a {
 /*Estilos para los detalles de los pasatiempos*/
 .pasatiempos{
     color: var(--text-primary);
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     /* background-color: var(--bg-card); */
     padding: 0.1rem;
     margin: 2rem 0.2rem;
@@ -338,6 +338,70 @@ li:focus {
   outline: none;
 }
 
+/* Estilos para sección de Proyectos */
+.proyectos{
+    padding: 1rem;
+    margin: 0rem 0.2rem;
+    text-align: justify;
+}
+
+.proyectos__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.proyectos__title p{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.proyectos__principal{
+    display: inline-block;
+    color: var(--text-secondary);
+    background-color: var(--bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    min-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-primary);
+    
+}
+
+
+.proyectos__principal h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.proyectos__articles{
+    display: inline-block;
+    color: var(--text-secondary);
+    background-color: var(--bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    min-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.proyectos__articles h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.proyectos__articles p {
+    margin-top: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
 
 /* Responsive Design*/
 @media (max-width: 768px) {
