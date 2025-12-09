@@ -283,6 +283,43 @@ a {
     margin-right: 0.5rem; 
 }
 
+.icono-whatsapp::before {
+    font-family: 'Font Awesome 6 Brands';
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    content: '\f232';
+    margin-right: 0.5rem; 
+}
+
+.icono-platzi::before {
+    font-family: 'Font Awesome 6 Free';
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    content: '\f02d';
+    margin-right: 0.5rem; 
+}
+
+.icono-linkedin::before {
+    font-family: 'Font Awesome 6 Brands';
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    content: '\f08c';
+    margin-right: 0.5rem; 
+}
+
+.icono-github::before {
+    font-family: 'Font Awesome 6 Brands';
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    content: '\f09b';
+    margin-right: 0.5rem; 
+}
+
+
 /* Estilo para la tabla de ciudades */
 table {
     max-width: 100%;
@@ -408,6 +445,7 @@ li:focus {
     padding: 1rem;
     margin: 0 0.2rem;
     text-align: justify;
+    
 }
 
 .tecnologia__title{
@@ -425,6 +463,7 @@ li:focus {
 .tecnologia__body {
     padding: 1rem;
     margin: 0rem 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .tecnologia__body ul {
@@ -447,26 +486,84 @@ li:focus {
 
 /* Sección Contacto */
 .contacto {
-    margin-top: 1rem;
     padding: 1rem;
+    background-color: var(--bg-light);
+    margin: 0 1rem;;
+    border-radius: 1rem;
 }
 
 .contacto__title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+.contacto__title h3{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .contacto__title p{
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 1rem;
 }
 
+.contacto__body {
+    padding: 1rem;
+    margin: 0rem 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto__body ul {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-wrap: 1;
+}
+.contacto__body li {
+    background: var(--background-color-secondary);
+    color: var(--text-color);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    margin: 0 1rem;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    width: 8rem;
+}
 
 /* Responsive Design*/
 @media (max-width: 768px) {
     .nav{
         display: none;
     }
+}
+
+/* prueba de animación */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    /* 25% {
+        transform: translateY(-5px);
+    } */
+    50% {
+        transform: translateY(-8px);
+    }
+    /* 75% {
+        transform: translateY(-5px);
+    } */
+}
+.bounce {
+    animation: bounce 2s infinite;
 }
