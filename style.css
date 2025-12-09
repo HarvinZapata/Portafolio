@@ -170,7 +170,8 @@ a {
     /* border-radius: 2rem; */
     /* background-color: var(--bg-card); */
     padding: 0.1rem;
-    margin: 2rem 0.2rem;
+    margin: 0 0.2rem;
+    margin-top: 2rem;
 }
 
 .pasatiempos__title{
@@ -195,7 +196,6 @@ a {
     margin: 0rem 0.5rem;
     color: var(--text-color);
     font-size: 0.8rem;
-    margin-bottom: 2rem;
 }
 
 .pasatiempos__details details {
@@ -402,6 +402,67 @@ li:focus {
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
+
+/* Estilos sección Tecnologías */
+.tecnologia {
+    padding: 1rem;
+    margin: 0 0.2rem;
+    text-align: justify;
+}
+
+.tecnologia__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.tecnologia__title p{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.tecnologia__body {
+    padding: 1rem;
+    margin: 0rem 0.5rem;
+}
+
+.tecnologia__body ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tecnologia__body li {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    margin: 0 1rem;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Sección Contacto */
+.contacto {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.contacto__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.contacto__title p{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
 
 /* Responsive Design*/
 @media (max-width: 768px) {
