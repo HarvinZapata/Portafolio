@@ -5,36 +5,61 @@
     box-sizing: border-box;
 }
 
-/* VARIABLES DE COLOR */
+/* VARIABLES*/
 :root {
-    --primary-color: #3b82f6; /*zul profundo - headers, títulos*/
-    --primary-light-color: #60a5fa; /*Azul claro - hover, acentos*/
-    --primary-dark-color: #1e3a8a; /*Azul profundo - headers, títulos*/
-    --secondary-color: #8b5cf6; /*Morado - elementos destacados*/
-    --backgroud-color: #ffffff; /*Blanco puro - fondo general*/
-    --background-color-secondary: #f3f4f6; /*Gris muy claro - secciones alternas*/
-    --text-color: #1f2937; /*Gris oscuro - texto principal*/
-    /* Regla 60-30-10
-    60% - Color principal (fondo, secciones grandes)
-    30% - Color secundario (tarjetas, elementos medianos)
-    10% - Color acento (botones, CTAs, highlights)*/
+    /* === COLORES === */
+    /* Primarios */
     --color-primary: #6366f1;
     --color-primary-opacy: rgba(99, 102, 241, 0.1);
     --color-primary-dark: #4f46e5;
     --color-primary-light: #818cf8;
+
+    /* Secundarios */
     --color-secondary: #06b6d4;
     --color-accent: #f59e0b;
+
+    /* Fondos */
     --bg-dark: #0f172a;
     --bg-medium: #1e293b;
     --bg-light: #334155;
     --bg-card: rgba(30, 41, 59, 0.7);
+    --bg-white: #f3f4f6;
+
+    /* Textos */
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
+    --text-color: #1f2937;
+    
+    /* === ESPACIADO === */
+    --space-xs: 0.25rem; /* extra small - muy pequeño */
+    --space-sm: 0.5rem; /* small - pequeño */
+    --space-sm-2: 0.75rem; /* small medium - pequeño mediano */
+    --space-md: 1rem; /* medium - mediano */
+    --space-md-2: 1.5rem; /* medium large - mediano grande */
+    --space-lg: 2rem; /* large - grande */
+    --space-lg-2: 2.5rem;
+    --space-xl: 4rem; /* extra large - muy grande */
+
+    --radius-sm: 0.5rem;
+    --radius-sm-2: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 2rem;
+    
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.25rem;
+    --font-xl: 1.5rem;
+    --font-xl-2: 2rem
+
+    /* === SOMBRAS ===*/
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
     --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+
+    /* === TRANSICIONES === */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
@@ -43,8 +68,8 @@
 /* ESTILOS GENERALES */
 body {
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+    font-size: var(--space-md);
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
     color: var(--text-primary);
 }
 
@@ -53,7 +78,7 @@ ul {
     list-style: none;
 }
 
-/* Enlaces sin subrayado y con color personalizado */
+/* Enlaces sin subrayado y con color personalizado -- responsig design - Tablet */
 a {
     text-decoration: none;
     color: var(---text-color);
@@ -64,49 +89,49 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .header__brand {
-    margin: 1rem;
+    margin: var(--space-md);
     text-align: left;
     color: var(---text-color);
 }
 
 .nav {
-    margin: 1rem;
+    margin: var(--space-md);
     text-align: center;
 }
 
 .nav__item {
     display: inline-block;
-    margin: 0 1.5rem;
+    margin: 0 var(--space-md-2);
     background-color: var(--tertiary-color);
-    border-radius: 0.8rem;
-    padding: 0.5rem 0.5rem;
+    border-radius: var(--radius-sm-2);
+    padding: var(--space-sm);
 }
 
 /* Icono de Hamburguesa */
 .hamburger {
-  width: 30px;
+  width: var(--space-lg);
   cursor: pointer;
 }
 
 .hamburger span {
   display: block;
-  height: 0.2rem;
+  height: var(--space-xs);
   width: 100%;
   background: var(--text-primary);
-  margin: 6px 0;
+  margin: var(--space-sm) 0;
   border-radius: 2px;
 }
 
 /*Secciones Sobre Mi*/
 .sobre-mi{
-    border-radius: 1rem;
+    border-radius: var(--radius-md);
     background: var(--bg-card);
-    padding: 0.5rem;
+    padding: var(--space-sm);
     margin: 0rem 0.2rem;
 }
 
@@ -114,11 +139,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: var(--space-md);
 }
 
 .sobre-mi__title h2{
-    font-size: 1.5rem;
+    font-size: var(--font-xl);
     font-weight: 700;
     background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text; /* Recorta el fondo solo donde hay texto */
@@ -128,7 +153,7 @@ a {
 }
 
 .sobre-mi__title p{
-    font-size: 1rem;
+    font-size: var(--space-md);
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -137,11 +162,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1rem;
-    margin: 0rem 1rem;
+    padding: 0 var(--space-md);
+    margin: 0rem var(--space-md);
     color: var(--text-secondary);
     text-align: justify;
-    font-size: 1rem;
+    font-size: var(--space-md);
 }
 
 /*Estilos para la cita destacada*/
@@ -149,12 +174,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: right;
-    padding: 1rem;
+    padding: var(--space-md);
     background: rgba(99, 102, 241, 0.1);
     color: var(--backgroud-color);
     text-align: right;
-    margin: 2rem 2.5rem;
-    border-radius: 0.5rem;
+    margin: var(--space-lg) var(--space-lg-2);
+    border-radius: var(--radius-sm);
     font-style: italic;
     box-shadow: inset 0.3rem 0 0 var(--color-primary);
 }
@@ -167,22 +192,20 @@ a {
 /*Estilos para los detalles de los pasatiempos*/
 .pasatiempos{
     color: var(--text-primary);
-    /* border-radius: 2rem; */
-    /* background-color: var(--bg-card); */
     padding: 0.1rem;
     margin: 0 0.2rem;
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
 }
 
 .pasatiempos__title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
+    padding: var(--space-md-2);
 }
 
 .pasatiempos__title p{
-    font-size: 1.8rem;
+    font-size: var(--space-lg);
     font-weight: 600;
 }
 
@@ -192,10 +215,10 @@ a {
     justify-content: center;
     text-align: justify;
     align-items: flex-start;
-    padding: 0 0.2rem;
-    margin: 0rem 0.5rem;
+    padding: 0 var(--space-xs);
+    margin: 0rem var(--space-sm);
     color: var(--text-color);
-    font-size: 0.8rem;
+    font-size: var(--font-sm);
 }
 
 .pasatiempos__details details {
@@ -203,18 +226,18 @@ a {
     color: var(--text-primary);
     background-color: var(--bg-light);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: var(--space-lg);
     min-width: 100%;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
+    margin-bottom: var(--space-md);
+    border-radius: var(--space-md);
 } 
 .pasatiempos .viajes[open] {
-    padding: 0 0.5rem;
+    padding: 0 var(--space-sm);
 }
 
 .pasatiempos__details summary {
     
-    font-size: 1.2rem;
+    font-size: var(--font-lg);
     font-weight: 600;
     color: var(--text-primary);
     /*padding: var(--spacing-sm);*/
@@ -223,21 +246,21 @@ a {
 }
 
 .pasatiempos__details p {
-    margin-top: 1rem;
+    margin-top: var(--space-md);
     line-height: 1.6;
 }
 
 .pasatiempos__details ul {
-    margin-top: 0.5rem;
-    padding-left: 0.5rem;
+    margin-top: var(--space-sm);
+    padding-left: var(--space-sm);
 }
 
-/*Estilos para Iconos*/
+/* === ICONOS === */
 .mi-icono::before {
     font-family: 'Font Awesome 6 Free'; /* Asegúrate de que la fuente esté cargada */
     font-weight: 900; /* Peso necesario para los iconos sólidos */
     content: '\f772'; /* Código Unicode para el icono de check */
-    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+    margin-right: var(--space-sm); /* Espacio entre el icono y el texto */
 }
 
 .icono-pestana {
@@ -247,7 +270,7 @@ a {
 }
 
 .mi-icono {
-    font-size: 1.2rem;
+    font-size: var(--font-lg);
     color: rgb(75, 192, 75);
 }
 
@@ -255,12 +278,12 @@ a {
     font-family: 'Font Awesome 6 Free'; /* Asegúrate de que la fuente esté cargada */
     font-weight: 900; /* Peso necesario para los iconos sólidos */
     content: '\e4e3'; /* Código Unicode para el icono de pregunta */
-    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+    margin-right: var(--space-sm); /* Espacio entre el icono y el texto */
 }
 
 
 .mi-icono-2 {
-    font-size: 1.2rem;
+    font-size: var(--font-lg);
     color: rgba(231, 84, 87, 0.893);
 }
 
@@ -268,61 +291,59 @@ a {
     font-family: 'Font Awesome 6 Free'; /* Asegúrate de que la fuente esté cargada */
     font-weight: 900; /* Peso necesario para los iconos sólidos */
     content: '\f061'; /* Código Unicode para el icono de lista */
-    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+    margin-right: var(--space-sm); /* Espacio entre el icono y el texto */
 }
 
-/*Icono de locación en los departamentos*/
 .icono-location::before {
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     content: '\f3c5';
-    margin-right: 0.5rem; 
+    margin-right: var(--space-sm); 
 }
 
-/*Iconos para listas */
 .icono-row::before {
     font-family: 'Font Awesome 6 Free';
-    font-size: 1rem;
+    font-size: var(--space-md);
     color: var(--color-primary-light);
     font-weight: 900;
     content: '\f0da';
-    margin-right: 0.5rem; 
+    margin-right: var(--space-sm); 
 }
 
 .icono-whatsapp::before {
     font-family: 'Font Awesome 6 Brands';
-    font-size: 1.2rem;
+    font-size: 1.var(--space-lg);
     font-weight: 900;
     color: var(--text-color);
     content: '\f232';
-    margin-right: 0.5rem; 
+    margin-right: var(--space-sm); 
 }
 
 .icono-platzi::before {
     font-family: 'Font Awesome 6 Free';
-    font-size: 1.2rem;
+    font-size: var(--font-lg);
     font-weight: 900;
     color: var(--text-color);
     content: '\f02d';
-    margin-right: 0.5rem; 
+    margin-right: var(--space-sm); 
 }
 
 .icono-linkedin::before {
     font-family: 'Font Awesome 6 Brands';
-    font-size: 1.2rem;
+    font-size: var(--font-lg);
     font-weight: 900;
     color: var(--text-color);
     content: '\f08c';
-    margin-right: 0.5rem; 
+    margin-right: var(--space-sm); 
 }
 
 .icono-github::before {
     font-family: 'Font Awesome 6 Brands';
-    font-size: 1.2rem;
+    font-size: var(--font-lg);
     font-weight: 900;
     color: var(--text-color);
     content: '\f09b';
-    margin-right: 0.5rem; 
+    margin-right: var(--space-sm); 
 }
 
 
@@ -331,13 +352,13 @@ table {
     max-width: 100%;
     background-color: var(--bg-medium);
     width: 100%;
-    border-radius: 2rem;
+    border-radius: var(--space-lg);
     border: var(--color-primary) 1px solid; 
-    margin-top: 2rem;
+    margin-top: var(--space-lg);
 }
 
 .tabla td {
-    padding: 0.5rem 1rem;
+    padding: var(--space-sm) var(--space-md);
 }
 
 .tabla .td-ciudades {
@@ -348,14 +369,14 @@ table {
 
 .tabla .td-departamentos {
     border-bottom: var(--color-primary) 0.5px solid;
-    padding-left: 0.5rem;
+    padding-left: var(--space-sm);
 }
 
 .tabla li{
     display: flex;
-    margin: 0.2rem;
-    border-radius: 0.5rem;
-    padding: 0.2rem 0.5rem;
+    margin: var(--space-xs);
+    border-radius: var(--space-sm);
+    padding: var(--space-xs) var(--space-sm);
     transition: 0.5s ease;
 }
 
@@ -367,7 +388,7 @@ li, li a {
 @media (hover: hover) and (pointer: fine) { /* Solo aplica en dispositivos con puntero fino (como mouse) */
   .tabla li:hover {
     background-color: var(--color-primary-opacy);
-    transform: translateX(1rem);
+    transform: translateX(var(--space-md));
 }
     .pasatiempos__details details:hover {
     transform: translateY(-5px);
@@ -383,8 +404,8 @@ li:focus {
 
 /* Estilos para sección de Proyectos */
 .proyectos{
-    padding: 1rem;
-    margin: 0rem 0.2rem;
+    padding: var(--space-md);
+    margin: 0rem var(--space-xs);
     text-align: justify;
 }
 
@@ -392,11 +413,11 @@ li:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
+    padding: var(--space-md-2);
 }
 
 .proyectos__title p{
-    font-size: 1.8rem;
+    font-size: var(--font-xl-2);
     font-weight: 600;
 }
 
@@ -405,86 +426,86 @@ li:focus {
     color: var(--text-secondary);
     background-color: var(--bg-light);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: var(--space-lg);
     min-width: 100%;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
+    margin-bottom: var(--space-md);
+    border-radius: var(--space-md);
     box-shadow: var(--shadow-glow);
     border-color: var(--color-primary);
     
 }
 
-
 .proyectos__principal h3{
-    font-size: 1.5rem;
+    font-size: var(--font-xl);
     font-weight: 700;
     color: var(--color-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
     text-align: center;
 }
+
 .proyectos__articles{
     display: inline-block;
     color: var(--text-secondary);
     background-color: var(--bg-light);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: var(--space-lg);
     min-width: 100%;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
+    margin-bottom: var(--space-md);
+    border-radius: var(--space-md);
 }
 
 .proyectos__articles h3{
-    font-size: 1.5rem;
+    font-size: var(--font-xl);
     font-weight: 700;
     color: var(--color-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
     text-align: center;
 }
+
 .proyectos__articles p {
-    margin-top: 1rem;
+    margin-top: var(--space-md);
     line-height: 1.6;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
 }
 
 /* Estilos sección Tecnologías */
 .tecnologia {
-    padding: 1rem;
-    margin: 0 0.2rem;
+    padding: var(--space-md);
+    margin: 0 var(--space-xs);
     text-align: justify;
-    
 }
 
 .tecnologia__title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
+    padding: var(--space-md-2);
 }
 
 .tecnologia__title p{
-    font-size: 1.8rem;
+    font-size: var(--font-xl-2);
     font-weight: 600;
 }
 
 .tecnologia__body {
-    padding: 1rem;
-    margin: 0rem 0.5rem;
-    margin-bottom: 1.5rem;
+    padding: var(--space-md);
+    margin: 0rem var(--space-sm);
+    margin-bottom: var(--space-md-2);
 }
 
 .tecnologia__body ul {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-md);
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .tecnologia__body li {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--space-md);
     box-shadow: var(--shadow-md);
-    margin: 0 1rem;
+    margin: 0 var(--space-md);
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
@@ -492,53 +513,53 @@ li:focus {
 
 /* Sección Contacto */
 .contacto {
-    padding: 1rem;
+    padding: var(--space-md);
     background-color: var(--bg-light);
-    margin: 0 1rem;;
-    border-radius: 1rem;
+    margin: 0 var(--space-md);
+    border-radius: var(--space-md);
 }
 
 .contacto__title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 0 var(--space-md-2);
 }
 
 .contacto__title h3{
-    font-size: 1.8rem;
+    font-size: var(--font-xl-2);
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
 }
 
 .contacto__title p{
-    font-size: 1rem;
+    font-size: var(--space-md);
     color: var(--text-secondary);
     font-weight: 500;
     text-align: justify;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
 }
 
 .contacto__body {
-    padding: 1rem;
-    margin: 0rem 0.5rem;
-    margin-bottom: 1.5rem;
+    padding: var(--space-md);
+    margin: 0rem var(--space-sm);
+    margin-bottom: var(--space-md-2);
 }
 
 .contacto__body ul {
     display: flex;
-    gap: 1.5rem;
+    gap: var(--space-md-2);
     justify-content: center;
     flex-wrap: wrap;
     flex-wrap: 1;
 }
 .contacto__body li {
-    background: var(--background-color-secondary);
+    background: var(--bg-white);
     color: var(--text-color);
-    padding: 1rem 1rem;
-    border-radius: 1rem;
+    padding: var(--space-md) var(--space-md);
+    border-radius: var(--space-md);
     box-shadow: var(--shadow-md);
-    margin: 0 1rem;
+    margin: 0 var(--space-md);
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
@@ -546,22 +567,22 @@ li:focus {
 }
 
 .aviso-legal {
-    padding: 1rem;
-    margin: 1rem 0.2rem;
+    padding: var(--space-md);
+    margin: var(--space-md) 0.var(--space-lg);
     background: var(--bg-dark);
-    border-radius: 1rem;
+    border-radius: var(--space-md);
 }
 
 .aviso-legal h3 {
-    font-size: 1.2rem;
+    font-size: var(--font-lg);
     font-weight: 700;
     color: var(--color-secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     text-align: center;
 }
 
 .aviso-legal p {
-    font-size: 0.9rem;
+    font-size: var(--font-base);
     color: var(--text-secondary);
     text-align: justify;
 }
