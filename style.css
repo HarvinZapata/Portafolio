@@ -132,7 +132,7 @@ a {
     border-radius: var(--radius-md);
     background: var(--bg-card);
     padding: var(--space-sm);
-    margin: 0rem 0.2rem;
+    margin: 0rem var(--space-xs);
 }
 
 .sobre-mi__title{
@@ -149,7 +149,7 @@ a {
     -webkit-background-clip: text; /* Recorta el fondo solo donde hay texto */
     -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el fondo degradado */
     background-clip: text; /* Recorta el fondo solo donde hay texto - Funciona en otros navegadores */
-    margin-bottom: 0.2rem;
+    margin-bottom: var(--space-xs);
 }
 
 .sobre-mi__title p{
@@ -193,7 +193,7 @@ a {
 .pasatiempos{
     color: var(--text-primary);
     padding: 0.1rem;
-    margin: 0 0.2rem;
+    margin: 0 var(--space-xs);
     margin-top: var(--space-lg);
 }
 
@@ -364,7 +364,7 @@ table {
 .tabla .td-ciudades {
     border-left: var(--color-primary) 2px solid;
     border-bottom: var(--color-primary) 0.5px solid;
-    padding-left: 0.2rem;
+    padding-left: var(--space-xs);
 }
 
 .tabla .td-departamentos {
