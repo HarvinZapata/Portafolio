@@ -521,7 +521,7 @@ li:focus {
 
 .contacto__body ul {
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
     flex-wrap: 1;
@@ -539,6 +539,26 @@ li:focus {
     width: 8rem;
 }
 
+.aviso-legal {
+    padding: 1rem;
+    margin: 1rem 0.2rem;
+    background: var(--bg-dark);
+    border-radius: 1rem;
+}
+
+.aviso-legal h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.aviso-legal p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: justify;
+}
 /* Responsive Design*/
 @media (max-width: 768px) {
     .nav{
