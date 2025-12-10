@@ -240,6 +240,12 @@ a {
     margin-right: 0.5rem; /* Espacio entre el icono y el texto */
 }
 
+.icono-pestana {
+    font-family: 'Font Awesome 6 Free'; 
+    font-weight: 900; 
+    content: '\f0b1'; 
+}
+
 .mi-icono {
     font-size: 1.2rem;
     color: rgb(75, 192, 75);
