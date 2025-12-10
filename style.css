@@ -542,7 +542,7 @@ li:focus {
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
-    width: 8rem;
+    width: 10rem;
 }
 
 .aviso-legal {
