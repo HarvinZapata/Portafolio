@@ -139,6 +139,7 @@ a {
     padding: var(--space-md-2);
 }
 
+/* Titulo mas pequeño para móviles */
 .sobre-mi__title {
     padding: var(--space-md);
 }
