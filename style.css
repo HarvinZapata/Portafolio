@@ -128,7 +128,7 @@ a {
 }
 
 /* === TITULOS DE SECCIÓN == */
-.sobre-mi__title,
+/* .sobre-mi__title,
 .pasatiempos__title,
 .proyectos__title,
 .tecnologia__title,
@@ -137,22 +137,34 @@ a {
     flex-direction: column;
     align-items: center;
     padding: var(--space-md-2);
+} */
+
+
+
+/* === UTILIDADES DE LAYOUT === */
+
+/**
+ * Utility: Centra contenido en columna
+ * Usado en: Títulos de sección, card, items
+ */
+.flex-center-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ /**
+ * Utility: Padding estándar de sección
+ * Padding 1.5rem
+ */
+.section-padding {
+    padding: var(--space-md-2);
 }
 
 /* Titulo mas pequeño para móviles */
 .sobre-mi__title {
     padding: var(--space-md);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /*Secciones Sobre Mi*/
@@ -181,7 +193,7 @@ a {
     font-weight: 500;
 }
 
-.sobre-mi__body{
+.sobre-mi__body{   /* Se repite */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,7 +205,7 @@ a {
 }
 
 /*Estilos para la cita destacada*/
-.sobre-mi__citation{
+.sobre-mi__citation{ 
     display: flex;
     flex-direction: column;
     align-items: right;
@@ -227,7 +239,7 @@ a {
     font-weight: 600;
 }
 
-.pasatiempos__details {
+.pasatiempos__details { /* Se repite */
     display: flex;
     flex-direction: column;
     justify-content: center;
