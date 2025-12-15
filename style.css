@@ -1,12 +1,49 @@
-/* RESET BÁSICO */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =================================================================
+   
+   PORTAFOLIO HARVIN ZAPATA v2.0
+   Archivo: style.css
+   Autor: Harvin Zapata
+   Última actualización: Diciembre 2025
+   
+   ARQUITECTURA: ITCSS (Inverted Triangle CSS)
+   
+   ================================================================= */
 
-/* VARIABLES*/
-:root {
+/* =================================================================
+   TABLA DE CONTENIDOS
+   =================================================================
+   
+   1. SETTINGS............Variables globales y configuración
+   2. TOOLS...............Utilidades y helpers (funciones, clases) de código / para facilitar tareas repetidas. 
+   3. GENERIC.............Reset y estilos base del navegador
+   4. ELEMENTS............Estilos de elementos HTML base - Define como se ven los elementos HTML nativos sin clases o IDs. (h1, h2, p, a, ul, etc.)
+   5. LAYOUT..............Estructura principal de la página -Esqueleto de la página web (header, footer, grid, contenedores)
+   6. COMPONENTS..........Componentes reutilizables - Cards, botones, navbar, iconos
+      6.1 Flex
+      6.2 Espaciado
+      6.3 Main
+      6.4 Cards
+      6.5 Íconos
+   7. SECTIONS............Secciones específicas de la página - Estilos para secciones únicas y específicas de la página.
+      7.1 Sobre Mí
+      7.2 Pasatiempos
+      7.2.1 Tabla de ciudades
+      7.3 Proyectos
+      7.4 Tecnologías
+      7.5 Contacto
+   8. ANIMATIONS..........Animaciones y transiciones
+   9. MEDIA QUERIES......Responsive design breakpoints
+   
+   ================================================================= */
+
+
+
+   /* =================================================================
+   1. SETTINGS - Variables y Configuración
+   ================================================================= */
+
+    /* VARIABLES*/
+   :root {
     /* === COLORES === */
     /* Primarios */
     --color-primary: #6366f1;
@@ -65,7 +102,19 @@
     --transition-slow: 0.5s ease;
 }
 
-/* ESTILOS GENERALES */
+/* =================================================================
+3. GENERIC - Reset y Estilos Base
+================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================================================================
+4. ELEMENTS - Estilos de Elementos HTML Base
+================================================================= */
+/* Estilos base para el cuerpo del documento */
 body {
     font-family: "Poppins", sans-serif;
     font-size: var(--space-md);
@@ -73,7 +122,6 @@ body {
     color: var(--text-primary);
 }
 
-/* ESTILOS DE NAVEGACIÓN */
 ul {
     list-style: none;
 }
@@ -81,38 +129,87 @@ ul {
 /* Enlaces sin subrayado y con color personalizado -- responsig design - Tablet */
 a {
     text-decoration: none;
-    color: var(---text-color);
 }
 
-/* HEADER */
-.header__container{
+/*Eliminar parpadeos en móviles por el hover*/
+li, li a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) { /* Solo aplica en dispositivos con puntero fino (como mouse) */
+  .tabla__item:hover {
+    background-color: var(--color-primary-opacy);
+    transform: translateX(var(--space-md));
+}
+    .pasatiempos__details details:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-primary);
+    cursor: pointer;
+}
+}
+
+li:focus {
+  outline: none;
+}
+
+
+/* =================================================================
+6. COMPONENTS - Componentes Reutilizables
+================================================================= */
+
+/* ===================================================
+   6.1 UTILITIES - Clases de utilidad reutilizables
+   Propósito: Layout, espaciado, helpers generales
+   Convención: .u-[propiedad]-[valor]
+   .u-* Utility 
+   =================================================== */
+
+/**
+ * Utility: Centra contenido en columna
+ * Usado en: Títulos de sección, card, items
+ */
+.u-flex-center-col {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+}
+
+.u-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === 6.2 Espaciado === */
+
+.u-margin-md {
+    margin: var(--space-md);
+}
+
+.u-padding-md {
     padding: var(--space-md);
-    margin-bottom: var(--space-lg);
 }
 
-.header__brand {
-    margin: var(--space-md);
-    text-align: left;
-    color: var(---text-color);
+/* ===================================================
+   6.2 BEM COMPONENTS - Componentes específicos
+   Propósito: Bloques con lógica y estados propios
+   Convención: .bloque__elemento--modificador
+   =================================================== */
+
+/* ===  6.3 MAIN === */
+.setion__title {
+    font-size: var(--font-xl-2);
+    font-weight: 600;
+    margin-bottom: var(--space-md-2);
 }
 
-.nav {
-    margin: var(--space-md);
-    text-align: center;
+    /* === 6.4 CARDS === */
+.card {
+    margin-bottom: var(--space-md-2);
 }
 
-.nav__item {
-    display: inline-block;
-    margin: 0 var(--space-md-2);
-    background-color: var(--tertiary-color);
-    border-radius: var(--radius-sm-2);
-    padding: var(--space-sm);
-}
-
-/* Icono de Hamburguesa */
+    /* === 6.5 ICONOS === */
 .hamburger {
   width: var(--space-lg);
   cursor: pointer;
@@ -127,153 +224,6 @@ a {
   border-radius: 2px;
 }
 
-/* === TITULOS DE SECCIÓN == */
-.sobre-mi__title,
-.pasatiempos__title,
-.proyectos__title,
-.tecnologia__title,
-.contacto__title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--space-md-2);
-}
-
-/* Titulo mas pequeño para móviles */
-.sobre-mi__title {
-    padding: var(--space-md);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*Secciones Sobre Mi*/
-.sobre-mi{
-    border-radius: var(--radius-md);
-    background: var(--bg-card);
-    padding: var(--space-sm);
-    margin: 0rem var(--space-xs);
-}
-
-
-
-.sobre-mi__title h2{
-    font-size: var(--font-xl);
-    font-weight: 700;
-    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text; /* Recorta el fondo solo donde hay texto */
-    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el fondo degradado */
-    background-clip: text; /* Recorta el fondo solo donde hay texto - Funciona en otros navegadores */
-    margin-bottom: var(--space-xs);
-}
-
-.sobre-mi__title p{
-    font-size: var(--space-md);
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.sobre-mi__body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 var(--space-md);
-    margin: 0rem var(--space-md);
-    color: var(--text-secondary);
-    text-align: justify;
-    font-size: var(--space-md);
-}
-
-/*Estilos para la cita destacada*/
-.sobre-mi__citation{
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    padding: var(--space-md);
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--backgroud-color);
-    text-align: right;
-    margin: var(--space-lg) var(--space-lg-2);
-    border-radius: var(--radius-sm);
-    font-style: italic;
-    box-shadow: inset 0.3rem 0 0 var(--color-primary);
-}
-
-/*Estilo para resaltar palabras en la cita*/
-.sobre-mi__citation strong{
-    color: var(--color-accent);
-}
-
-/*Estilos para los detalles de los pasatiempos*/
-.pasatiempos{
-    color: var(--text-primary);
-    padding: 0.1rem;
-    margin: 0 var(--space-xs);
-    margin-top: var(--space-lg);
-}
-
-
-
-.pasatiempos__title p{
-    font-size: var(--space-lg);
-    font-weight: 600;
-}
-
-.pasatiempos__details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    align-items: flex-start;
-    padding: 0 var(--space-xs);
-    margin: 0rem var(--space-sm);
-    color: var(--text-color);
-    font-size: var(--font-sm);
-}
-
-.pasatiempos__details details {
-    display: inline-block;
-    color: var(--text-primary);
-    background-color: var(--bg-light);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: var(--space-lg);
-    min-width: 100%;
-    margin-bottom: var(--space-md);
-    border-radius: var(--space-md);
-} 
-.pasatiempos .viajes[open] {
-    padding: 0 var(--space-sm);
-}
-
-.pasatiempos__details summary {
-    
-    font-size: var(--font-lg);
-    font-weight: 600;
-    color: var(--text-primary);
-    /*padding: var(--spacing-sm);*/
-    /*user-select: none;*/
-    list-style: none;
-}
-
-.pasatiempos__details p {
-    margin-top: var(--space-md);
-    line-height: 1.6;
-}
-
-.pasatiempos__details ul {
-    margin-top: var(--space-sm);
-    padding-left: var(--space-sm);
-}
-
-/* === ICONOS === */
 .mi-icono::before {
     font-family: 'Font Awesome 6 Free'; /* Asegúrate de que la fuente esté cargada */
     font-weight: 900; /* Peso necesario para los iconos sólidos */
@@ -298,7 +248,6 @@ a {
     content: '\e4e3'; /* Código Unicode para el icono de pregunta */
     margin-right: var(--space-sm); /* Espacio entre el icono y el texto */
 }
-
 
 .mi-icono-2 {
     font-size: var(--font-lg);
@@ -332,7 +281,6 @@ a {
     font-family: 'Font Awesome 6 Brands';
     font-size: 1.var(--space-lg);
     font-weight: 900;
-    color: var(--text-color);
     content: '\f232';
     margin-right: var(--space-sm); 
 }
@@ -341,7 +289,6 @@ a {
     font-family: 'Font Awesome 6 Free';
     font-size: var(--font-lg);
     font-weight: 900;
-    color: var(--text-color);
     content: '\f02d';
     margin-right: var(--space-sm); 
 }
@@ -350,7 +297,6 @@ a {
     font-family: 'Font Awesome 6 Brands';
     font-size: var(--font-lg);
     font-weight: 900;
-    color: var(--text-color);
     content: '\f08c';
     margin-right: var(--space-sm); 
 }
@@ -359,12 +305,139 @@ a {
     font-family: 'Font Awesome 6 Brands';
     font-size: var(--font-lg);
     font-weight: 900;
-    color: var(--text-color);
     content: '\f09b';
     margin-right: var(--space-sm); 
 }
 
 
+/* =================================================================
+7. SECTIONS - Secciones Específicas de la Página
+================================================================= */
+/* === 6.1 Header === */
+.header__container{
+    justify-content: space-between;
+    margin-bottom: var(--space-lg); /* 2rem */
+}
+
+.header__brand {
+    text-align: left;
+    color: var(---text-color);
+}
+
+/* === 6.2 Navegación === */
+.nav {
+    text-align: center;
+}
+
+.nav__item {
+    display: inline-block;
+    margin: 0 var(--space-md-2);
+    background-color: var(--tertiary-color);
+    border-radius: var(--radius-sm-2);
+    padding: var(--space-sm);
+}
+
+/* === 7.1 SOBRE MI ===*/
+.sobre-mi{
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    padding: var(--space-sm);
+    margin: 0rem var(--space-xs);
+}
+
+.sobre-mi__body{
+    padding: 0 var(--space-md);
+    margin: 0rem var(--space-md);
+    color: var(--text-secondary);
+    text-align: justify;
+    font-size: var(--space-md);
+}
+
+/*Estilos para la cita destacada*/
+.sobre-mi__citation{ 
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    padding: var(--space-md);
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--backgroud-color);
+    text-align: right;
+    margin: var(--space-lg) var(--space-lg-2);
+    border-radius: var(--radius-sm);
+    font-style: italic;
+    box-shadow: inset 0.3rem 0 0 var(--color-primary);
+}
+
+/*Estilo para resaltar palabras en la cita*/
+.sobre-mi__citation strong{
+    color: var(--color-accent);
+}
+
+/* Titulos */
+.sobre-mi__title p{
+    font-size: var(--space-md);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.sobre-mi__title h2{
+    font-size: var(--font-xl);
+    font-weight: 700;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text; /* Recorta el fondo solo donde hay texto */
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el fondo degradado */
+    background-clip: text; /* Recorta el fondo solo donde hay texto - Funciona en otros navegadores */
+    margin-bottom: var(--space-xs);
+}
+
+/* === 7.2 PASATIEMPOS === */
+/*Estilos para los detalles de los pasatiempos*/
+.pasatiempos{
+    padding: 0.1rem;
+    margin: 0 var(--space-xs);
+    margin-top: var(--space-lg);
+}
+
+.pasatiempos__details {
+    text-align: justify;
+    align-items: flex-start;
+    padding: 0 var(--space-xs);
+    margin: 0rem var(--space-sm);
+    font-size: var(--font-sm);
+}
+
+.pasatiempos__details details {
+    display: inline-block;
+    color: var(--text-primary);
+    background-color: var(--bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-lg);
+    min-width: 100%;
+    margin-bottom: var(--space-md);
+    border-radius: var(--space-md);
+} 
+
+.pasatiempos .viajes[open] {
+    padding: 0 var(--space-sm);
+}
+
+.pasatiempos__details summary {
+    font-size: var(--font-lg);
+    font-weight: 600;
+    list-style: none;
+}
+
+.pasatiempos__details p {
+    margin-top: var(--space-md);
+    line-height: 1.6;
+}
+
+.pasatiempos__details ul {
+    margin-top: var(--space-sm);
+    padding-inline-start: var(--space-sm);
+}
+
+/* === 7.2.1 Tabla de ciudades === */
 /* Estilo para la tabla de ciudades */
 table {
     max-width: 100%;
@@ -375,22 +448,22 @@ table {
     margin-top: var(--space-lg);
 }
 
-.tabla td {
+.tabla__celda {
     padding: var(--space-sm) var(--space-md);
 }
 
-.tabla .td-ciudades {
+.tabla__celda--ciudades {
     border-left: var(--color-primary) 2px solid;
     border-bottom: var(--color-primary) 0.5px solid;
-    padding-left: var(--space-xs);
+    padding-inline-start: var(--space-xs);
 }
 
-.tabla .td-departamentos {
+.tabla__celda--departamentos {
     border-bottom: var(--color-primary) 0.5px solid;
-    padding-left: var(--space-sm);
+    padding-inline-start: var(--space-sm);
 }
 
-.tabla li{
+.tabla__item{
     display: flex;
     margin: var(--space-xs);
     border-radius: var(--space-sm);
@@ -398,40 +471,11 @@ table {
     transition: 0.5s ease;
 }
 
-/*Eliminar parpadeos en móviles por el hover*/
-li, li a {
-  -webkit-tap-highlight-color: transparent;
-}
 
-@media (hover: hover) and (pointer: fine) { /* Solo aplica en dispositivos con puntero fino (como mouse) */
-  .tabla li:hover {
-    background-color: var(--color-primary-opacy);
-    transform: translateX(var(--space-md));
-}
-    .pasatiempos__details details:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-glow);
-    border-color: var(--color-primary);
-    cursor: pointer;
-}
-}
-
-li:focus {
-  outline: none;
-}
-
-/* Estilos para sección de Proyectos */
+/* === 7.3 Proyectos === */
 .proyectos{
-    padding: var(--space-md);
     margin: 0rem var(--space-xs);
     text-align: justify;
-}
-
-
-
-.proyectos__title p{
-    font-size: var(--font-xl-2);
-    font-weight: 600;
 }
 
 .proyectos__principal{
@@ -481,22 +525,8 @@ li:focus {
     margin-bottom: var(--space-sm);
 }
 
-/* Estilos sección Tecnologías */
-.tecnologia {
-    padding: var(--space-md);
-    margin: 0 var(--space-xs);
-    text-align: justify;
-}
-
-
-
-.tecnologia__title p{
-    font-size: var(--font-xl-2);
-    font-weight: 600;
-}
-
+/* === 7.4 Tecnologías === */
 .tecnologia__body {
-    padding: var(--space-md);
     margin: 0rem var(--space-sm);
     margin-bottom: var(--space-md-2);
 }
@@ -519,32 +549,14 @@ li:focus {
     cursor: pointer;
 }
 
-/* Sección Contacto */
+/* === 7.5 Contacto === */
 .contacto {
-    padding: var(--space-md);
     background-color: var(--bg-light);
     margin: 0 var(--space-md);
     border-radius: var(--space-md);
 }
 
-
-
-.contacto__title h3{
-    font-size: var(--font-xl-2);
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-}
-
-.contacto__title p{
-    font-size: var(--space-md);
-    color: var(--text-secondary);
-    font-weight: 500;
-    text-align: justify;
-    margin-bottom: var(--space-md);
-}
-
 .contacto__body {
-    padding: var(--space-md);
     margin: 0rem var(--space-sm);
     margin-bottom: var(--space-md-2);
 }
@@ -556,9 +568,9 @@ li:focus {
     flex-wrap: wrap;
     flex-wrap: 1;
 }
+
 .contacto__body li {
     background: var(--bg-white);
-    color: var(--text-color);
     padding: var(--space-md) var(--space-md);
     border-radius: var(--space-md);
     box-shadow: var(--shadow-md);
@@ -570,8 +582,7 @@ li:focus {
 }
 
 .aviso-legal {
-    padding: var(--space-md);
-    margin: var(--space-md) 0.var(--space-lg);
+    margin: var(--space-md) var(--space-lg);
     background: var(--bg-dark);
     border-radius: var(--space-md);
 }
@@ -589,12 +600,11 @@ li:focus {
     color: var(--text-secondary);
     text-align: justify;
 }
-/* Responsive Design*/
-@media (max-width: 768px) {
-    .nav{
-        display: none;
-    }
-}
+
+
+/* =================================================================
+8. ANIMATIONS - Animaciones y Transiciones
+================================================================= */
 
 /* prueba de animación */
 @keyframes bounce {
@@ -604,16 +614,67 @@ li:focus {
     100% {
         transform: translateY(0);
     }
-    /* 25% {
-        transform: translateY(-5px);
-    } */
     50% {
         transform: translateY(-8px);
     }
-    /* 75% {
-        transform: translateY(-5px);
-    } */
 }
+
 .bounce {
     animation: bounce 2s infinite;
 }
+
+/* =================================================================
+9. MEDIA QUERIES - Responsive Design Breakpoints
+================================================================= */
+
+/* Responsive Design*/
+@media (max-width: 768px) {
+    .nav{
+        display: none;
+    }
+}
+
+
+/* 🎓 QUÉ APRENDER PARA EL SIGUIENTE NIVEL
+Para ser contratado (Junior sólido)
+
+✅ CSS Grid Layout (solo usas Flexbox)
+✅ Mobile-first approach
+✅ Accesibilidad (WCAG) - Focus states, ARIA
+✅ Metodología BEM estricta
+✅ CSS Custom Properties avanzado
+
+Para destacar (Semi-Senior)
+
+📚 PostCSS / Autoprefixer
+📚 CSS Modules / CSS-in-JS (según stack)
+📚 Design Systems (tokens, componentes atómicos)
+📚 Performance CSS (Critical CSS, code splitting)
+📚 Animaciones avanzadas (GSAP, Framer Motion)
+
+Para ser Senior
+
+🚀 Architecture at scale (SMACSS, CUBE CSS)
+🚀 CSS Houdini (Custom Paint, Layout APIs)
+🚀 Preprocessors proficiency (Sass/SCSS avanzado)
+🚀 Testing CSS (visual regression testing) */
+
+/* 🎯 PLAN DE ACCIÓN (30 días)
+Semana 1-2: Correcciones Básicas
+
+ Corregir typos de variables
+ Implementar mobile-first
+ Agregar 3+ breakpoints
+ Mejorar accesibilidad
+
+Semana 3: CSS Grid
+
+ Refactorizar layout con Grid
+ Crear sistema de 12 columnas
+ Practicar Grid + Flexbox juntos
+
+Semana 4: Proyecto Showcase
+
+ Crear 3 proyectos de práctica con CSS moderno
+ Documentar decisiones técnicas
+ Subir a GitHub con README profesional */
