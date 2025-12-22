@@ -537,6 +537,20 @@ table {
     justify-content: center;
     flex-wrap: wrap;
 }
+.proyectos__articles--batatabit {
+    text-align: center;
+    margin-top: var(--space-md);
+}
+
+.proyectos__articles--batatabit a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--bg-white);
+    background-color: var(--color-primary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--space-sm);
+    box-shadow: var(--shadow-sm);
+}
 
 .tecnologia__body li {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
