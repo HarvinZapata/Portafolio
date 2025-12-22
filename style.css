@@ -579,6 +579,7 @@ table {
     text-align: center;
     cursor: pointer;
     width: 10rem;
+    color: var(--text-color);
 }
 
 .aviso-legal {
