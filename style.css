@@ -147,8 +147,14 @@ li, li a {
     border-color: var(--color-primary);
     cursor: pointer;
 }
-}
+.proyectos__articles--batatabit a:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-primary);
+    cursor: pointer;
 
+}
+}
 li:focus {
   outline: none;
 }
