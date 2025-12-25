@@ -333,14 +333,7 @@ li:focus {
 /* === 6.2 Navegación === */
 .nav {
     text-align: center;
-}
-
-.nav__item {
-    display: inline-block;
-    margin: 0 var(--space-md-2);
-    background-color: var(--tertiary-color);
-    border-radius: var(--radius-sm-2);
-    padding: var(--space-sm);
+    display: none;
 }
 
 /* === 7.1 SOBRE MI ===*/
@@ -381,7 +374,7 @@ li:focus {
 
 /* Titulos */
 .sobre-mi__title p{
-    font-size: var(--space-md);
+    font-size: var(--font-base);
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -649,11 +642,7 @@ table {
 ================================================================= */
 
 /* Responsive Design*/
-@media (max-width: 768px) {
-    .nav{
-        display: none;
-    }
-}
+
 
 
 /* 🎓 QUÉ APRENDER PARA EL SIGUIENTE NIVEL

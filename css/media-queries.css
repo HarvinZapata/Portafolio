@@ -1,0 +1,94 @@
+:root {
+    /* Textos */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-color: #1f2937;
+
+    /* === ESPACIADO === */
+    --space-xs: 0.25rem; /* extra small - muy pequeño */
+    --space-sm: 0.5rem; /* small - pequeño */
+    --space-sm-2: 0.75rem; /* small medium - pequeño mediano */
+    --space-md: 1rem; /* medium - mediano */
+    --space-md-2: 1.5rem; /* medium large - mediano grande */
+    --space-lg: 2rem; /* large - grande */
+    --space-lg-2: 2.5rem;
+    --space-xl: 4rem; /* extra large - muy grande */
+
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.25rem;
+    --font-xl: 1.5rem;
+    --font-xl-2: 2rem;
+}
+
+@media (min-width: 768px){ /*Tablets */
+    .sobre-mi, .pasatiempos, .proyectos, .tecnologia__body, .contacto  {
+        margin: 0 var(--space-xl);
+    }
+
+    .card {
+        margin-bottom: var(--space-lg-2);
+    }
+
+    .sobre-mi__title h2 {
+        font-size: var(--font-xl-2);
+    }
+
+    .sobre-mi__title p {
+        font-size: var(--font-lg);
+    }
+
+    .pasatiempos .viajes[open] {
+    padding: var(--space-lg);
+    }
+
+    .tabla__celda--departamentos {
+        padding-inline-start: var(--space-lg);
+    }
+    .tabla__celda {
+        padding-inline-start: var(--space-lg);
+    }
+}
+
+@media (min-width: 1400px) {
+    .card {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: var(--space-lg-2);
+    }
+
+    .nav {
+        display: inline-block;
+    }
+
+    .nav__item {
+    display: inline-block;
+    margin: 0 var(--space-md-2);
+    background-color: var(--tertiary-color);
+    border-radius: var(--radius-sm-2);
+    padding: var(--space-sm);
+    color: var(--text-primary);
+    font-size: var(--font-lg);
+    }
+
+    .nav__item a:visited{
+        color: var(--text-primary);
+    }
+
+    .nav__item:hover {
+    background-color: var(--color-primary-opacy);
+    transform: translateY(-0.5rem);
+
+    }
+
+    .hamburger span {
+        display: none;
+    }
+
+    .aviso-legal {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}

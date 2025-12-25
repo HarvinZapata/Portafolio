@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media-queries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--Libreria para Iconos - Font Awesome-->
     <title>Harvin Zapata - Desarrollador Web</title>
     <link rel="icon" href="src/portfolio.png" type="image/png">
@@ -207,7 +208,7 @@
                         </td>
                    </tr>
                    <tr>
-                    <td class="tabla__celda" ><span class="icono-location"><strong>Tolima</strong></span></td>
+                    <td class="tabla__celda"><span class="icono-location"><strong>Tolima</strong></span></td>
                     <td class="tabla__celda tabla__celda--ciudades">
                         <ul>
                             <li class="tabla__item"><span class="icono-row">Ambalema</span></li>
@@ -260,11 +261,23 @@
                         </ul> -->
                     </article>
                 </div>
+
+                <div class="proyectos__articles">
+                    <article>
+                        <h3>Blogs Generico</h3>
+                        <p>Desarrollo de página wee, tigo blogs, con información genérica, proyecto de maquetación con CSS, resultado de prática de curso de Maquetación con CSS en Platzi.</p>
+                        <i>No es diseño Mobile First</i>
+                        <div class="proyectos__articles--batatabit">
+                            <a href="https://harvinzapata.github.io/Blog/" target="_blank" rel="noopener noreferrer">Blogs</a>
+                        </div>
+                        
+                    </article>
+                </div>
                 
             </div>
         </section>
 
-        <section id="tecnologias">
+        <section id="tecnologias" class="card">
             <div class="tecnologia__title u-flex-center-col section-padding">
                 <p class="setion__title">🛠️ Tecnologías usadas</p>
             </div>
@@ -281,7 +294,7 @@
     </main>
 
     <footer>
-        <div class="contacto u-padding-md" class="card">
+        <div class="contacto u-padding-md card">
             <div class="contacto__title u-flex-center-col section-padding">
                 <p class="setion__title">Redes de contacto</p>
                 <p>Estoy interesado en aprender de otros desarrolladores, colaborar en proyectos, compartir experiencias</p>
