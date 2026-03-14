@@ -73,6 +73,12 @@
     font-size: var(--font-lg);
     }
 
+    .u-flex-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
     .nav__item a:visited{
         color: var(--text-primary);
     }
